@@ -5,7 +5,19 @@
 
 tasks =[]
 
-while True:
+def view_tasks():
+    print("\n Your To-Do List:")
+    for index,task in enumerate(tasks):
+        print(f"{index} : {task["name"]} - {task["status"]}")
+def add_task():
+            new_task = input("Enter the task you want to add: ")
+            task = {"name": new_task, "status": False}
+            tasks.append(task)
+            print(f"'{new_task}' added successfully!")
+
+while True:        
+        
+        
     print("\n ==== To-Do List Menu ====")
     print("1. View all tasks")
     print("2. Add a task")
@@ -16,15 +28,10 @@ while True:
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
-        print("\n Your To-Do List:")
-        for index,task in enumerate(tasks):
-            print(f"{index} : {task["name"]} - {task["status"]}")
+        view_tasks()
 
     elif choice == 2: 
-        new_task = input("Enter the task you want to add: ")
-        task = {"name": new_task, "status": False}
-        tasks.append(task)
-        print(f"'{new_task}' added successfully!")
+        add_task()
     elif choice == 3:
         task_index = int(input("Enter the index of the task you want to remove: "))
         tasks.pop(task_index)

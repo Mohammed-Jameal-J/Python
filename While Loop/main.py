@@ -25,11 +25,11 @@ while number <= 10:
 # else:
 #     print("completed")
 
-secret = 7
-while True:
-    guess = int(input("Guess the number: "))
-    if guess == secret:
-        print("Success")
-        break
-    else:
-        print("Try again")
+# secret = 7
+# while True:
+#     guess = int(input("Guess the number: "))
+#     if guess == secret:
+#         print("Success")
+#         break
+#     else:
+#         print("Try again")
